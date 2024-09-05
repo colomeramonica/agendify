@@ -1,10 +1,16 @@
 import "./App.css";
+import { ThemeProvider } from "@/components/theme-provider"
+import Menu from "./components/menu";
+import ListView from "./components/list-view";
 
 function App() {
   return (
-    <>
-      <h1 className="font-bold items-center">Hello, world!</h1>
-    </>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <div className="h-screen w-full">
+        <Menu />
+        <ListView />
+      </div>
+    </ThemeProvider>
   );
 }
 
